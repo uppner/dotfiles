@@ -1,0 +1,118 @@
+// Place your key bindings in this file to override the defaults
+[
+  {
+    "command": "vscode-neovim.send",
+    // the key sequence to activate the binding
+    "key": "ctrl+y",
+    // don't activate during insert mode
+    "when": "neovim.mode == cmdline",
+    // the input to send to Neovim
+    "args": "<C-y>",
+  },
+  {
+    "key": "ctrl+p",
+    "command": "-workbench.action.quickOpen"
+  },
+  {
+    "command": "vscode-neovim.send",
+    // the key sequence to activate the binding
+    "key": "ctrl+w",
+    // don't activate during insert mode
+    "when": "editorTextFocus && neovim.mode != insert",
+    // the input to send to Neovim
+    "args": "<C-w>",
+  },
+  {
+    "command": "vscode-neovim.send",
+    // the key sequence to activate the binding
+    "key": "ctrl+d",
+    // don't activate during insert mode
+    "when": "editorTextFocus && neovim.mode != insert",
+    // the input to send to Neovim
+    "args": "<C-d>",
+  },
+  {
+    "command": "vscode-neovim.send",
+    // the key sequence to activate the binding
+    "key": "ctrl+u",
+    // don't activate during insert mode
+    "when": "editorTextFocus && neovim.mode != insert",
+    // the input to send to Neovim
+    "args": "<C-u>",
+  },
+  {
+    "key": "ctrl+y",
+    "command": "acceptSelectedSuggestion",
+    "when": "suggestWidgetHasFocusedSuggestion && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "ctrl+y",
+    "command": "-redo"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "-workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "ctrl+n",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+  },
+  {
+    "key": "ctrl+p",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus || suggestWidgetVisible && textInputFocus && !suggestWidgetHasFocusedSuggestion"
+  },
+  { // Move focus to the SideBar if not (!) there
+    "key": "ctrl+b",
+    "when": "!sideBarFocus",
+    "commands": [
+      "workbench.action.focusSideBar"
+    ]
+  },
+  { // Move focus to the Editor, if currently in the SideBar
+    "key": "ctrl+b",
+    "when": "!sideBarVisible",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.files.action.focusFilesExplorer"
+      ]
+    }
+  },
+  { // Move focus to the Editor, if currently in the SideBar
+    "key": "ctrl+b",
+    "when": "sideBarVisible",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "workbench.action.toggleSidebarVisibility",
+        "workbench.action.focusActiveEditorGroup"
+      ]
+    }
+  },
+  {
+    "key": "enter",
+    "command": "runCommands",
+    "when": "filesExplorerFocus && foldersViewVisible && !explorerResourceIsFolder && !inputFocus",
+    "args": {
+      "commands": [
+        "explorer.openAndPassFocus",
+        "workbench.action.focusActiveEditorGroup",
+        "workbench.action.toggleSidebarVisibility"
+      ]
+    }
+  },
+  {
+    "key": "escape",
+    "command": "runCommands",
+    "args": {
+      "commands": [
+        "cancelSelection",
+        "vscode-neovim.escape"
+      ]
+    },
+    "when": "editorHasSelection && textInputFocus"
+  }
+]
