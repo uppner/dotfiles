@@ -1,0 +1,29 @@
+{
+    "extensions.experimental.affinity": {
+        "asvetliakov.vscode-neovim": 1
+    },
+    "debug.onTaskErrors": "abort",
+    "window.customTitleBarVisibility": "auto",
+    "window.menuBarVisibility": "toggle",
+    "debug.openDebug": "neverOpen",
+    "workbench.activityBar.location": "hidden",
+    "workbench.sideBar.location": "right",
+    "debug.console.closeOnEnd": true,
+    "debug.internalConsoleOptions": "neverOpen",
+    "workbench.editor.showTabs": "none",
+    "breadcrumbs.enabled": false,
+    "editor.stickyScroll.enabled": false,
+    "window.commandCenter": false,
+    "workbench.layoutControl.enabled": false,
+    "workbench.editor.editorActionsLocation": "hidden",
+    "editor.minimap.enabled": false,
+    "debug.toolBarLocation": "hidden",
+    "editor.autoClosingQuotes": "never",
+    "editor.autoClosingBrackets": "never",
+    "editor.autoClosingComments": "never",
+    "editor.autoClosingDelete": "never",
+    "editor.autoClosingOvertype": "never",
+    "git.openRepositoryInParentFolders": "never",
+    "editor.lineNumbers": "relative"
+    // Comment
+}
